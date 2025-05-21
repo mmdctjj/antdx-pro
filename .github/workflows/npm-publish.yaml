@@ -36,9 +36,11 @@ jobs:
           else
             git log "$PREV_TAG"..HEAD --pretty=format:"%s (%an)" > commits.txt
           fi
-          echo "log<<EOF" >> $GITHUB_OUTPUT
-          cat commits.txt >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          {
+            echo "log<<EOF"
+            cat commits.txt
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
       - name: 创建 GitHub Release
         uses: softprops/action-gh-release@v1
         with:
