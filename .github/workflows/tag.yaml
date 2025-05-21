@@ -1,6 +1,9 @@
 name: Create Tag
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:  # 手动触发
 
 jobs:
