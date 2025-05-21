@@ -11,7 +11,7 @@ export default defineConfig({
     name: 'antdx-pro',
     logo: isProd ? '/antdx-pro/logo.png' : '/logo.png',
     prefersColor: { default: 'auto' },
-    footer: '@antdx/pro',
+    footer: 'antdx-pro',
     socialLinks: {
       github: 'https://github.com/mmdctjj/antdx-pro',
     },

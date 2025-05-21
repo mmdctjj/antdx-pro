@@ -8,8 +8,8 @@
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "@antdx/pro": ["src"],
-      "@antdx/pro/*": ["src/*", "*"]
+      "antdx-pro": ["src"],
+      "antdx-pro/*": ["src/*", "*"]
     }
   },
   "include": [".dumirc.ts", "src/**/*"]

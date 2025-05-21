@@ -12,13 +12,13 @@ order: 2
 ### 下载
 
 ```bash
-pnpm add @antdx/pro
+pnpm add antdx-pro
 ```
 ### 引入
 
 ```js
 import React from 'react';
-import { Copilot } from '@antdx/pro';
+import { Copilot } from 'antdx-pro';
 export default () => <Copilot />;
 ```
 ### Options
@@ -55,7 +55,7 @@ import {
   SendOutlined,
 } from '@ant-design/icons';
 import { Attachments, Prompts } from '@ant-design/x';
-import { Copilot } from '@antdx/pro';
+import { Copilot } from 'antdx-pro';
 import { Button, Flex, Typography, Drawer } from 'antd';
 import { useState } from 'react';
 import markdownit from 'markdown-it';

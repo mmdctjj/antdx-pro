@@ -1,5 +1,5 @@
 {
-  "name": "@antdx/pro",
+  "name": "antdx-pro",
   "version": "0.0.1",
   "description": "by @antd/x ai assistant or copilot",
   "module": "dist/index.js",

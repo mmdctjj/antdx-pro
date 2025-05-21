@@ -42,7 +42,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Attachments, Prompts } from '@ant-design/x';
-import { Copilot } from '@antdx/pro';
+import { Copilot } from 'antdx-pro';
 import { Button, Drawer, Flex } from 'antd';
 import { useState } from 'react';
 
@@ -208,7 +208,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Attachments, Prompts } from '@ant-design/x';
-import { Copilot } from '@antdx/pro';
+import { Copilot } from 'antdx-pro';
 import { Button, Drawer, Flex } from 'antd';
 import { useState } from 'react';
 
@@ -383,7 +383,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Attachments, Prompts, XStream } from '@ant-design/x';
-import { Copilot } from '@antdx/pro';
+import { Copilot } from 'antdx-pro';
 import { Button, Flex, Drawer } from 'antd';
 import { useState } from 'react';
 
@@ -576,7 +576,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Attachments, Prompts, XStream } from '@ant-design/x';
-import { Copilot } from '@antdx/pro';
+import { Copilot } from 'antdx-pro';
 import { Button, Flex, Drawer, Typography } from 'antd';
 import { useState } from 'react';
 import markdownit from 'markdown-it';
@@ -757,7 +757,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Attachments, Prompts } from '@ant-design/x';
-import { Copilot } from '@antdx/pro';
+import { Copilot } from 'antdx-pro';
 import { Button, Drawer, Flex } from 'antd';
 import { useState } from 'react';
 
@@ -954,7 +954,7 @@ import {
   SendOutlined,
 } from '@ant-design/icons';
 import { Attachments, Prompts } from '@ant-design/x';
-import { Copilot } from '@antdx/pro';
+import { Copilot } from 'antdx-pro';
 import { Button, Flex, Typography } from 'antd';
 import { useState } from 'react';
 import markdownit from 'markdown-it';

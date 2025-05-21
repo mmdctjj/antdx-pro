@@ -1,7 +1,7 @@
-# @antdx/pro
+# antdx-pro
 
-[![NPM version](https://img.shields.io/npm/v/@antdx/pro.svg?style=flat)](https://npmjs.org/package/@antdx/pro)
-[![NPM downloads](http://img.shields.io/npm/dm/@antdx/pro.svg?style=flat)](https://npmjs.org/package/@antdx/pro)
+[![NPM version](https://img.shields.io/npm/v/antdx-pro.svg?style=flat)](https://npmjs.org/package/antdx-pro)
+[![NPM downloads](http://img.shields.io/npm/dm/antdx-pro.svg?style=flat)](https://npmjs.org/package/antdx-pro)
 
 基于 antdx 封装的 UI 库
 
@@ -9,11 +9,11 @@
 
 
 ```bash
-pnpm add @antdx/pro
+pnpm add antdx-pro
 ```
 ```jsx
 import React from 'react';
-import { Copilot } from '@antdx/pro';
+import { Copilot } from 'antdx-pro';
 export default () => <Copilot />;
 ```
 ## Options
