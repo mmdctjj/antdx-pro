@@ -3,15 +3,37 @@
 [![NPM version](https://img.shields.io/npm/v/@antdx/pro.svg?style=flat)](https://npmjs.org/package/@antdx/pro)
 [![NPM downloads](http://img.shields.io/npm/dm/@antdx/pro.svg?style=flat)](https://npmjs.org/package/@antdx/pro)
 
-A react library developed with dumi
+基于 antdx 封装的 UI 库
 
 ## Usage
 
-TODO
 
+```bash
+pnpm add @antdx/pro
+```
+```jsx
+import React from 'react';
+import { Copilot } from '@antdx/pro';
+export default () => <Copilot />;
+```
 ## Options
 
-TODO
+```ts
+interface ICopilotProps {
+  /** 欢迎 **/
+  welcomeProps?: WelcomeProps;
+  /** 聊天 **/
+  bubbleListProps?: BubbleListProps;
+  /** 建议 **/
+  promptsProps?: PromptsProps;
+  /** 输入 **/
+  expressProps?: {
+    attachmentsProps?: AttachmentsProps;
+    senderProps?: SenderProps;
+    suggestionProps?: SuggestionProps;
+  };
+}
+```
 
 ## Development
 

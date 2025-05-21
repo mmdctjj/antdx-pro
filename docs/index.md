@@ -1,22 +1,20 @@
 ---
 hero:
-  title: library
-  description: A react library developed with dumi
+  title: Antd x pro
+  description: 基于 antdx 封装的 UI 库
   actions:
-    - text: Hello
-      link: /
-    - text: World
-      link: /
+    - text: 快速开始
+      link: /guide
+    - text: 组件
+      link: /components/copilot
 features:
-  - title: Hello
+  - title: 灵活
     emoji: 💎
-    description: Put hello description here
-  - title: World
+    description: 随意搭配都好看
+  - title: 不零散
     emoji: 🌈
-    description: Put world description here
-  - title: '!'
+    description: UI 组织起来更清晰
+  - title: 好用
     emoji: 🚀
-    description: Put ! description here
+    description: 支持 AI 助手和 AI 聊天
 ---
-
-@antdx/pro
