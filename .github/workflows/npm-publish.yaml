@@ -22,11 +22,28 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: 读取 package.json 信息
+        id: pkg
+        run: |
+          echo "name=$(jq -r .name package.json)" >> $GITHUB_OUTPUT
+          echo "version=$(jq -r .version package.json)" >> $GITHUB_OUTPUT
+      - name: 获取本次发布 commit 记录
+        id: changelog
+        run: |
+          PREV_TAG=$(git tag --sort=-creatordate | head -n 2 | tail -n 1)
+          if [ -z "$PREV_TAG" ]; then
+            git log --pretty=format:"%s (%an)" > commits.txt
+          else
+            git log "$PREV_TAG"..HEAD --pretty=format:"%s (%an)" > commits.txt
+          fi
+          echo "log<<EOF" >> $GITHUB_OUTPUT
+          cat commits.txt >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
       - name: 创建 GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }}
-          body: "自动发布新版本"
+          name: ${{ steps.pkg.outputs.name }}@${{ steps.pkg.outputs.version }}
+          body: ${{ steps.changelog.outputs.log }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
