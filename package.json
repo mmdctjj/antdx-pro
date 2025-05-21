@@ -1,6 +1,6 @@
 {
   "name": "antdx-pro",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "by @antd/x ai assistant or copilot",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

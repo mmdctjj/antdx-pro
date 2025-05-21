@@ -1,32 +1,36 @@
-name: npm publish
+name: Publish & Release
 
 on:
   push:
-    branches:
-      - master
-  workflow_dispatch:
+    tags:
+      - 'v*'  # 监听版本号 tag 推送
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org/'
+
       - run: npm install
       - run: npm run build
+
       - name: Publish to npm
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: 读取 package.json 信息
         id: pkg
         run: |
           echo "name=$(jq -r .name package.json)" >> $GITHUB_OUTPUT
           echo "version=$(jq -r .version package.json)" >> $GITHUB_OUTPUT
+
       - name: 获取本次发布 commit 记录
         id: changelog
         run: |
@@ -38,9 +42,10 @@ jobs:
           fi
           {
             echo "log<<EOF"
-            cat commits.txt
+            printf "%s\n" "$(cat commits.txt)"
             echo "EOF"
-          } >> $GITHUB_OUTPUT
+          } >> "$GITHUB_OUTPUT"
+
       - name: 创建 GitHub Release
         uses: softprops/action-gh-release@v1
         with:

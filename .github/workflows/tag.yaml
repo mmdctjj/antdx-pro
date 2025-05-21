@@ -1,0 +1,21 @@
+name: Create Tag
+
+on:
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Create and push Git tag
+        run: |
+          VERSION=$(jq -r .version package.json)
+          git tag "v$VERSION"
+          git push origin "v$VERSION"
