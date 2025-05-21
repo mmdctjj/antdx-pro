@@ -9,7 +9,7 @@ export default defineConfig({
   publicPath: isProd ? '/antdx-pro/' : '/',
   themeConfig: {
     name: 'antdx-pro',
-    logo: isProd ? '/raetantdx-proable/logo.png' : '/logo.png',
+    logo: isProd ? '/antdx-pro/logo.png' : '/logo.png',
     prefersColor: { default: 'auto' },
     footer: '@antdx/pro',
     socialLinks: {
