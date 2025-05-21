@@ -22,7 +22,7 @@ export interface ICopilotProps {
   bubbleListProps?: BubbleListProps;
   /** 建议 **/
   promptsProps?: PromptsProps;
-  /** 输入，三选一 **/
+  /** 输入 **/
   expressProps?: {
     attachmentsProps?: AttachmentsProps;
     senderProps?: SenderProps;
